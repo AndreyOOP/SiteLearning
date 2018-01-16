@@ -15,3 +15,17 @@ body {
 button.navbar-toggle:hover{
 	background-color: green;
 }
+
+h1 {
+	color: black;
+}
+
+.row {
+	background-color: #906090;
+	height: 1000px;
+}
+
+h2 {
+	background-color: #204020;
+	color: black;
+}
