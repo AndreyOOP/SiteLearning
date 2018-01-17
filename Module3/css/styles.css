@@ -1,20 +1,47 @@
 body {
-	background-color: #61122f;
-}
-.navbar{
-	background-color: white;
-	border-radius: 0;
-}
-.navbar-brand, .navbar-collapse{
-	clear: both;
+	background-color: #a6a9e0;
+	font-size: 16px;
 }
 
-.icon-bar, button.navbar-toggle{
+.navbar{
+	background-color: #686ccb;
+	border-radius: 0;
+	border: none;
+}
+
+.navbar-default .navbar-brand{
+	float: left;
+	color: black;
+	font-size: 1.2em;
+	margin-left: 20px;
+}
+
+
+.navbar-default .navbar-toggle {
+	float: right;
+	margin-right: 20px;
 	border: 1px solid black;
 }
-button.navbar-toggle:hover{
-	background-color: green;
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: #adc1ce;
 }
+.icon-bar{
+	border: 1px solid black;
+}
+
+.navbar-collapse{
+	clear: both;
+}
+.navbar-default .navbar-nav>li>a {
+	color: black;
+	text-align: center;
+	font-size: 1.1em;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	background-color: #adc1ce;
+}
+
+
 
 h1 {
 	color: black;
