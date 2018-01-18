@@ -1,5 +1,5 @@
 body {
-	background-color: #a6a9e0;
+	background-color: #a9ace3;
 	font-size: 16px;
 }
 
@@ -50,12 +50,17 @@ h1 {
 	color: black;
 }
 
-.row {
-	background-color: #906090;
+.chicken-details{
+	margin: 20px;
+	border: 1px solid black;
+	padding: 15px;
 	height: 1000px;
+	overflow: hidden;
+	background-color: #ccd;
 }
 
 h2 {
-	background-color: #204020;
+	margin-top: 0;
 	color: black;
+	font-size: 1.7em;
 }
