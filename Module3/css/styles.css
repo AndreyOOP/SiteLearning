@@ -12,10 +12,12 @@ body {
 .navbar-default .navbar-brand{
 	float: left;
 	color: black;
-	font-size: 1.2em;
+	font-size: 1.6em;
 	margin-left: 20px;
 }
-
+.navbar-default .navbar-brand:hover{
+	color: black;
+}
 
 .navbar-default .navbar-toggle {
 	float: right;
@@ -41,7 +43,6 @@ body {
 .navbar-default .navbar-nav>li>a:hover{
 	background-color: #adc1ce;
 }
-
 .navbar-nav{
 	margin: 0 -15px 0 -15px;
 }
@@ -52,7 +53,6 @@ h1 {
 
 .chicken-details{
 	margin: 20px;
-	border: 1px solid black;
 	padding: 15px;
 	height: 1000px;
 	overflow: hidden;
