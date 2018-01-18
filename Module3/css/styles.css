@@ -4,7 +4,7 @@ body {
 }
 
 .navbar{
-	background-color: #686ccb;
+	background-color: #585cbb;
 	border-radius: 0;
 	border: none;
 }
@@ -31,17 +31,20 @@ body {
 
 .navbar-collapse{
 	clear: both;
+	background-color: #8080e0;
 }
 .navbar-default .navbar-nav>li>a {
 	color: black;
-	text-align: center;
 	font-size: 1.1em;
+	border-bottom: 1px solid #ddd; 
 }
 .navbar-default .navbar-nav>li>a:hover{
 	background-color: #adc1ce;
 }
 
-
+.navbar-nav{
+	margin: 0 -15px 0 -15px;
+}
 
 h1 {
 	color: black;
