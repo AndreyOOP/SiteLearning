@@ -51,16 +51,38 @@ h1 {
 	color: black;
 }
 
-.chicken-details{
-	margin: 20px;
+.submenu-details{
+	margin-top: 20px;
+	margin-bottom: 20px;
 	padding: 15px;
-	height: 1000px;
+	height: 900px;
 	overflow: hidden;
 	background-color: #ccd;
+}
+.submenu-details > a{
+	position: absolute;
+	bottom: 30px;
+	right: 50px;
+	font-size: 1.1em;
+	clear: both;
 }
 
 h2 {
 	margin-top: 0;
 	color: black;
 	font-size: 1.7em;
+}
+
+/*to check how to do this using only bootstrap e.g. without @media
+	just using classes combine few properties between .col-xs-12 and .col-sm-12 for example*/
+@media(max-width: 767px){
+	.col-xs-12 .submenu-details{
+		height: auto;
+	}	
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+	.col-sm-12 .submenu-details{
+		height: auto;
+	}	
 }

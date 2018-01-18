@@ -27,13 +27,13 @@
 	        		<div class="collapse navbar-collapse" id="collapsable-nav">
 	        			<ul class="nav navbar-nav navbar-right visible-xs">
 	        				<li>
-	              				<a href="#" class="text-center">Chicken</a>
+	              				<a href="#chicken-header" class="text-center">Chicken</a>
 	            			</li>
 	            			<li>
-	              				<a href="#" class="text-center">Beef</a>
+	              				<a href="#beef-header" class="text-center">Beef</a>
 	            			</li>
 	            			<li>
-	              				<a href="#" class="text-center">Sushi</a>
+	              				<a href="#sushi-header" class="text-center">Sushi</a>
 	            			</li>
 	        			</ul>
 	        		</div>	
@@ -43,12 +43,29 @@
 		</nav>
 	</header>
 
-	<h1 class="text-center">Our Menu</h1>
+	<h1 id="menu" class="text-center">Our Menu</h1>
 
 	<div class="container">
-			<div class="col-md-12 col-sm-12 col-xs-12">
-				<div class="chicken-details">
-					<h2 class="text-center">Chicken</h2>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="submenu-details">
+					<h2 id="chicken-header" class="text-center">Chicken</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 </p>
+					<a href="#menu">Back</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="submenu-details">
+					<h2 id="beef-header" class="text-center">Beef</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -63,23 +80,25 @@
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 </p>
+					<a href="#menu">Back</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="submenu-details">
+					<h2 id="sushi-header" class="text-center">Sushi</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text </p>
+					 </p>
+					<a href="#menu">Back</a>
 				</div>
 			</div>
 	</div>
@@ -88,5 +107,7 @@
   	<script src="js/jquery-1.11.3.min.js"></script>
   	<script src="js/bootstrap.min.js"></script>
   	<script src="js/script.js"></script>
+
+  	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
