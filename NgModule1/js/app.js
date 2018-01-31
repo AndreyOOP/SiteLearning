@@ -11,7 +11,7 @@
     $scope.borderColorClass = "";
     $scope.message = "";
 
-    var getQtyOfWords = function(dishList){
+    var GetQtyOfWords = function(dishList){
         
         if(dishList === undefined || dishList === "")
             return -1;
@@ -31,9 +31,9 @@
         return qty;
     }
 
-    $scope.CountDishes = function(){ //todo add optional part
+    $scope.CountDishes = function(){
         
-        var qty = getQtyOfWords($scope.inputText);
+        var qty = GetQtyOfWords($scope.inputText);
 
         if( qty <= 0){
             $scope.message = "Please enter data first";
