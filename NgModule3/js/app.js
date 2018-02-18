@@ -63,7 +63,7 @@
 
                 if(searchTerm){
                     for(var i=0; i<items.length; i++){
-                        if(items[i].description.includes(searchTerm)){
+                        if(items[i].description.indexOf(searchTerm) >= 0){
                             found.push(items[i]);
                         }
                     }
