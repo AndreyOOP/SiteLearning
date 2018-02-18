@@ -3,44 +3,58 @@
 
     angular.module('NarrowItDownApp', []).
     controller('NarrowItDownController', NarrowItDownController).
-    service('MenuSearchService', MenuSearchService);
+    service('MenuSearchService', MenuSearchService).
+    constant('MenuItemsPath', "https://davids-restaurant.herokuapp.com/menu_items.json");
     
     NarrowItDownController.$inject = ['MenuSearchService'];
     function NarrowItDownController(MenuSearchService){
 
         var contr = this; //todo rename
 
+        contr.sterm = "";
         contr.found = "";
 
-        contr.f = function(){
-            MenuSearchService.getMatchedMenuItems('').then(function(result){
-
-                console.log(result); //will return menu item[1]
-                contr.found = result;
-            }); //todo add error handling
+        contr.narrow = function(){
+            MenuSearchService.getMatchedMenuItems(contr.sterm).then(function(result){ //todo add search term
+                
+                // todo temporary;
+                contr.found = "";
+                for(var i=0; i<result.length; i++){
+                    contr.found += result[i].description + "|";
+                }
+            }).catch(function(error){
+                console.log(error);
+            });
         }
     }
 
-    MenuSearchService.$inject = ['$http'];
-    function MenuSearchService($http){
+    MenuSearchService.$inject = ['$http', 'MenuItemsPath'];
+    function MenuSearchService($http, MenuItemsPath){
 
         var service = this;
 
         service.getMatchedMenuItems = function(searchTerm){
 
-            //using $http rich out to the server
-            var httpPromise = $http({
-                url: "https://davids-restaurant.herokuapp.com/menu_items.json" //todo inject as a constant
+            return $http({
+                url: MenuItemsPath 
             }).then(function(result){
                 
-                //loop them & check search term
-                //alert(result.data.menu_items);
-                
-                return result.data.menu_items[1];
+                var found = [];
+                var items = result.data.menu_items;
 
-            }); //todo add error catch
-            
-            return httpPromise; //return list wrappend to the promise
+                if(searchTerm){
+                    for(var i=0; i<items.length; i++){
+                        if(items[i].description.includes(searchTerm)){
+                            found.push(items[i]);
+                        }
+                    }
+                }
+
+                return found;
+
+            }).catch(function(error){
+                console.log(error);
+            });
         };
     }
 })
