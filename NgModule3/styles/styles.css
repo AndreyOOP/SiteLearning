@@ -50,3 +50,34 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+table, th, td{
+	border: 1px solid black;
+	text-align: center;
+}
+table{
+	width: 100%;
+}
+th{
+	background-color: CornflowerBlue;
+}
+th.short-name{
+	width: 10%;
+}
+th.item-name{
+	width: 20%;
+}
+th.description{
+	width: 60%;
+}
+th.remove-button{
+	width: 10%;
+}
+tr:nth-child(even){
+	background-color: Lavender;
+}
+
+.warning{
+	font-size: 20px;
+	font-style: italic;
+}

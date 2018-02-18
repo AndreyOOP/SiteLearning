@@ -1,7 +1,15 @@
-<ul>
-    <li ng-repeat="item in narrower.foundItm">
-        <span>{{item.short_name}} - {{item.name}}: {{item.description}}</span>
-        <button ng-click="narrower.onRemove({index: $index});">Don't want this one!</button>
-    </li>
-</ul>
-<div ng-if="narrower.foundItm.length === 0">Nothing found</div>
+<table ng-if="narrower.foundItm.length > 0">
+    <tr>
+        <th class="short-name">Short Name</th>
+        <th class="item-name">Item Name</th>
+        <th class="description">Description</th>
+        <th class="remove-button">Remove</th>
+    </tr>
+    <tr ng-repeat="item in narrower.foundItm">
+        <td>{{item.short_name}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td><button ng-click="narrower.onRemove({index: $index});">Don't want this one!</button></td>
+    </tr>
+</table>
+<div class="warning" ng-if="narrower.foundItm.length === 0">Nothing found</div>
