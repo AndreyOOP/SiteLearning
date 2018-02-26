@@ -2,11 +2,12 @@
     'use strict';
     
     angular.module('data')
-    .component('categories', {
-      templateUrl: 'src/templates/shoppinglist.template.html',
+    .component('categoryList', {
+      templateUrl: 'src/templates/category-list.template.html',
       bindings: {
-        items: '<'
+        categItems: '<'
       }
     });
     
-})();
+    
+})();    

@@ -7,7 +7,7 @@
     CategoriesController.$inject = ['categories'];  //categories come from state resolve
     function CategoriesController(categories) {
       var ctrl = this;
-      ctrl.items = categories;
+      ctrl.categoryItems = categories;
     }
     
 })();
