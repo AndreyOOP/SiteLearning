@@ -6,7 +6,7 @@
 #signup-form h2 {
     text-align: center;
 }
-#signup-form input[type="button"] {
+#signup-form input[type="submit"] {
     width: 100px;
     height: 40px;
     background-color: #4d0b23;
@@ -25,4 +25,23 @@
     display: grid;
     grid-template-columns: 110px auto;
     grid-row-gap: 3px;
+}
+
+#signup-form .ng-touched.ng-valid{
+    background-color: rgb(230, 255, 230);
+}
+
+#signup-form .ng-touched.ng-invalid{
+    color: rgb(255, 73, 1);
+}
+
+.err-input{
+    font-size: 0.8em;
+    font-style: italic;
+    color: rgb(255, 73, 1);
+}
+
+#signup-form input[disabled="disabled"]{
+    opacity: 0.8;
+    border: none;
 }
