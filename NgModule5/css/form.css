@@ -1,0 +1,28 @@
+#signup-form input {
+    color: black;
+    border-radius: 5px;
+}
+
+#signup-form h2 {
+    text-align: center;
+}
+#signup-form input[type="button"] {
+    width: 100px;
+    height: 40px;
+    background-color: #4d0b23;
+    border: solid black 2px;
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: 0;
+    color: whitesmoke;
+    font-weight: bold
+}
+
+.form-grid {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 110px auto;
+    grid-row-gap: 3px;
+}
