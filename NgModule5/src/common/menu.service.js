@@ -32,7 +32,7 @@ function MenuService($http, ApiPath) {
     return $http.get(ApiPath + '/menu_items/' + category + '.json');
   };
   
-  //move to another service
+  //move to another service ?
   var infoSave = {};
   service.saveRegInfo = function(info){
     infoSave = info;
