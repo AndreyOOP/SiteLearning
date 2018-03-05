@@ -1,0 +1,14 @@
+.user-data{
+    font-style: italic;
+}
+
+h2+[ui-sref="public.signup"]{
+    font-weight: bold;
+    color: gainsboro;
+    border: solid gainsboro 2px;
+    padding: 4px;
+    border-radius: 6px;
+    background-color: #4d0b23;
+    display: inline-block;
+    margin-top: 10px;
+}

@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="css/form.css">
+<div id="signup-form">
+    <h2>Sign up our newsletter</h2>
+    <form name="subscribeForm" novalidate>
+        <div class="form-grid">
+                
+            <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first_name" 
+                       ng-model="signupFormController.first_name"
+                       required
+                       minlength="3"
+                       ng-maxlength="30"
+                >
+                <div ng-if="(subscribeForm.first_name.$error.minlength || subscribeForm.first_name.$error.required) && subscribeForm.first_name.$touched"></div>
+                <div ng-if="(subscribeForm.first_name.$error.minlength || subscribeForm.first_name.$error.required) && subscribeForm.first_name.$touched" class="err-input">
+                    First Name must be at least 3 characters long
+                </div>
+                <div ng-if="subscribeForm.first_name.$error.maxlength && subscribeForm.first_name.$touched"></div>
+                <div ng-if="subscribeForm.first_name.$error.maxlength && subscribeForm.first_name.$touched" class="err-input">
+                    First Name must be less than 30 characters long
+                </div>
+
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name" 
+                       ng-model="signupFormController.last_name"
+                       required
+                       minlength="3"
+                       ng-maxlength="30"
+                >
+                <div ng-if="(subscribeForm.last_name.$error.minlength || subscribeForm.last_name.$error.required) && subscribeForm.last_name.$touched"></div>
+                <div ng-if="(subscribeForm.last_name.$error.minlength || subscribeForm.last_name.$error.required) && subscribeForm.last_name.$touched" class="err-input">
+                    Last Name must be at least 3 characters long
+                </div>
+                <div ng-if="subscribeForm.last_name.$error.maxlength && subscribeForm.last_name.$touched"></div>
+                <div ng-if="subscribeForm.last_name.$error.maxlength && subscribeForm.last_name.$touched" class="err-input">
+                    Last Name must be less than 30 characters long
+                </div>
+        
+                <label for="e-mail">Email:</label>
+                <input type="email" id="e-mail" name="e_mail" 
+                       ng-model="signupFormController.e_mail"
+                       required
+                >
+                <div ng-if="subscribeForm.e_mail.$invalid && subscribeForm.e_mail.$touched"></div>
+                <div ng-if="subscribeForm.e_mail.$invalid && subscribeForm.e_mail.$touched" class="err-input">
+                    Email format is not valid
+                </div>
+        
+                <label for="u-phone">Phone:</label>
+                <input type="text" id="u-phone" placeholder="xxx-xxx-xxxx" name="u_phone"
+                       ng-model="signupFormController.u_phone"
+                       required
+                       pattern="(\d{3})-(\d{3})-(\d{4})"
+                >
+                <div ng-if="subscribeForm.u_phone.$invalid && subscribeForm.u_phone.$touched"></div>
+                <div ng-if="subscribeForm.u_phone.$invalid && subscribeForm.u_phone.$touched" class="err-input">
+                    Phone have to be in format xxx-xxx-xxxx
+                </div>
+        
+                <label for="favorite-dish">Favorite Dish:</label>
+                <input type="text" id="favorite-dish" name="favorite_dish"
+                       ng-model="signupFormController.favorite_dish"
+                >
+                <div ng-if="signupFormController.favorite"></div>
+                <div ng-if="signupFormController.favorite" class="err-input">
+                    No such menu number exists
+                </div>
+                <div ng-if="signupFormController.saved"></div>
+                <div ng-if="signupFormController.saved">
+                    Your information has been saved
+                </div>
+
+                <div></div>
+                <input type="submit" value="Submit"
+                    ng-disabled="subscribeForm.$invalid"
+                    ng-click="signupFormController.submit()"
+                >
+        </div>
+    </form>
+</div>

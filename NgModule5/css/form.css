@@ -1,0 +1,47 @@
+#signup-form input {
+    color: black;
+    border-radius: 5px;
+}
+
+#signup-form h2 {
+    text-align: center;
+}
+#signup-form input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    background-color: #4d0b23;
+    border: solid black 2px;
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: 0;
+    color: whitesmoke;
+    font-weight: bold
+}
+
+.form-grid {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 110px auto;
+    grid-row-gap: 3px;
+}
+
+#signup-form .ng-touched.ng-valid{
+    background-color: rgb(230, 255, 230);
+}
+
+#signup-form .ng-touched.ng-invalid{
+    color: rgb(255, 73, 1);
+}
+
+.err-input{
+    font-size: 0.8em;
+    font-style: italic;
+    color: rgb(255, 73, 1);
+}
+
+#signup-form input[disabled="disabled"]{
+    opacity: 0.8;
+    border: none;
+}
