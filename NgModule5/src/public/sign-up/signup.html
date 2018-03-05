@@ -59,7 +59,13 @@
                 </div>
         
                 <label for="favorite-dish">Favorite Dish:</label>
-                <input type="text" id="favorite-dish" name="favorite_dish">
+                <input type="text" id="favorite-dish" name="favorite_dish"
+                       ng-model="signupFormController.favorite_dish"
+                >
+                <div ng-if="signupFormController.favorite"></div>
+                <div ng-if="signupFormController.favorite" class="err-input">
+                    No such menu number exists
+                </div>
 
                 <div></div>
                 <input type="submit" value="Submit"

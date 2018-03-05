@@ -27,6 +27,25 @@ function MenuService($http, ApiPath) {
     });
   };
 
+  service.getMenuItem = function(category){
+
+    // return $http.get(ApiPath + '/menu_items/' + category + '.json').then(function (response) { //this path do not exist on temp solution
+    //   return response.data;
+    // });
+
+    return $http.get(ApiPath + '/menu_items/' + category + '.json');
+  };
+  
+  //move to another service
+  var infoSave = {};
+  service.saveRegInfo = function(info){
+    infoSave = info;
+  }
+
+  service.loadRegInfo = function(){
+    return infoSave;
+  }
+
 }
 
 
